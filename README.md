@@ -16,6 +16,7 @@ Erstelle ein Verzeichnis namens `javascript-workshop` und erzeuge dort ein minim
 <html>
    <head>
       <title>JavaScript Workshop</title>
+      <script type="javascript" src="test.js" />
    </head>
    <body>
       <p>Hallo Welt in HTML</p>
@@ -29,27 +30,9 @@ Schreibe danach ein JavaScript Datei names `test.js`  mit folgendem Inhalt:
 document.write("Hallo Welt in JavaScript");
 ```
 
-Und ändere die HTML Datei so um, dass die JavaScript Datei importiert wird. 
-
-```html
-<!doctype html>
-<html>
-   <head>
-      <title>JavaScript Workshop</title>
-      <script type="javascript" src="test.js" />
-   </head>
-   <body>
-      <p>Hallo Welt in HTML</p>
-   </body>
-</html>
-```
-
 Im Weiteren werden wir nur in dieser JavaScript Datei arbeiten. 
 
-## Vorstellung 
-
-
-## Simple Sprachkonstrukte
+## Einfache Sprachkonstrukte
 
 ```js
 // variables
@@ -95,9 +78,15 @@ x(2,3); // 5
 
 ## Aufgabe 1
 
-Übergabe der Zahlen 1 bis 100 an die FizzBuzz Funktion
+```js
+var fizzbuzz = function(n) {
+   // TODO 
+};
+// TODO rufe fizzbuzz mit den Zahlen 1 bis 100 auf. 
+```
 
-Ausgaberegeln/Pseudocode: 
+
+FizzBuzz Pseudocode: 
 
 - Wenn Zahl durch 5 und 3 teilbar ist, dann FizzBuzz.
 - Wenn Zahl teilbar durch 3, dann Fizz. 
@@ -143,7 +132,17 @@ object.key; // 3
 // Kombination von objects und functions. Oder wie strukturiere ich meinen Code?
 object = {
    "key1": "value1",
-   "key2": function (x) { return x + 1 }
+   "key2": function (x) { 
+      return x + 1; 
+   }
+   "key3": {
+      "asdf": function () { 
+         return "hallo"; 
+      },
+      "asdfasdf": function () { 
+         return this.asdf; // im gleichen Objekt kann man Variablen über this.varname ansprechen
+      }
+   }
 };
 ```
 
@@ -154,14 +153,17 @@ BEISPIEL: `localhost:3000/admin/order_origin/.json`
 Organisiere dein fizzbuzz so, dass es wie folgt aufgerufen werden kann:
 
 ```js
-// calling fizzbuzz
+// Führt Code aus Aufgabe 1 aus, d.h. Ausgabe von 1 bis 100 unter verwendung der FizzBuzz Regeln
 de.feki.js.fizzbuzz();
 ```
 
-Hinweis: Nutze hierfür ineinander verschachtelte Objektstrukturen (Hashes) um die entsprechenden Namespaces zu erstellen. 
+Hinweise: 
+- Nutze hierfür ineinander verschachtelte Objektstrukturen (Hashes) um die entsprechenden Namespaces zu erstellen. 
+- Methoden im gleichen Objekt, können entweder über den globalen Pfad oder direkt mit dem Schlüsselwort `this` referenziert werden. 
 
 Zusatzaufgabe: 
-Extrahiere drei weitere Methoden (teilbarDurch3, teilbarDurch5 und teilbarDurch3und5) und verwende diese geeignet. Hierzu entweder den direkten Pfad angeben, oder das Schlüsselwort this verwenden. 
+
+Extrahiere drei weitere Methoden (`teilbarDurch3`, `teilbarDurch5` und `teilbarDurch3und5`) und verwende diese geeignet. 
 
 ## Schlechtes Erbe
 
