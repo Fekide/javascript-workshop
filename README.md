@@ -3,23 +3,51 @@
 Dauer: 1h
 Umgebung: In Google Chrome JavaScript Console
 
-## Gliederung
-
-- Motivation
-- Einfache Sprachkonstrukte wiederholen
-- Aufgabe 1
-- Komplexere Sprachkonstrukte wiederholen
-- Aufgabe 2
-- JavaScript: The Bad Parts/Heritages
-- Überprüfen von Code in Aufgabe 2 in JSLint
-
 ## Motivation
 - Dicke der Bücher (JavaScript: The Complete Reference vs. JavaScript: The Good Parts) vergleichen
 - Schaut aus wie Java und C, ist aber sehr sehr unterschiedlich davon!
 
-## Hallo Welt
+## Hallo Welt (Aufgabe 0)
 
-Hallo Welt Programm.  
+Erstelle ein Verzeichnis namens `javascript-workshop` und erzeuge dort ein minimales `test.html` mit folgendem Inhalt:
+
+```html
+<!doctype html>
+<html>
+   <head>
+      <title>JavaScript Workshop</title>
+   </head>
+   <body>
+      <p>Hallo Welt in HTML</p>
+   </body>
+</html>
+```
+
+Schreibe danach ein JavaScript Datei names `test.js`  mit folgendem Inhalt:
+
+```js
+document.write("Hallo Welt in JavaScript");
+```
+
+Und ändere die HTML Datei so um, dass die JavaScript Datei importiert wird. 
+
+```html
+<!doctype html>
+<html>
+   <head>
+      <title>JavaScript Workshop</title>
+      <script type="javascript" src="test.js" />
+   </head>
+   <body>
+      <p>Hallo Welt in HTML</p>
+   </body>
+</html>
+```
+
+Im Weiteren werden wir nur in dieser JavaScript Datei arbeiten. 
+
+## Vorstellung 
+
 
 ## Simple Sprachkonstrukte
 
