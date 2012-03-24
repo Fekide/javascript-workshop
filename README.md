@@ -55,6 +55,7 @@ function add(x,y) {
 add(2,3); // 5
 oder
 
+// anonyme Funktion die in einer Variable gespeichert wird
 var add = function(x,y) {
    return x + y;
 }
@@ -119,7 +120,7 @@ object = {
 };
 ```
 
-BEISPIEL: localhost:3000/admin/order_origin/.json
+BEISPIEL: `localhost:3000/admin/order_origin/.json`
 
 ## Aufgabe 2
 
@@ -137,7 +138,7 @@ Extrahiere drei weitere Methoden (teilbarDurch3, teilbarDurch5 und teilbarDurch3
 
 ## Schlechtes Erbe
 
-- Blockless Statements
+### Blockless Statements
 
 ```js
 if (foo)
@@ -152,15 +153,15 @@ if (foo)
      solve();
 ```
 
-Wann wird solve(); ausgeführt?
+Wann wird `solve();` ausgeführt?
 
-- Expression and Empty Statements
+### Expression and Empty Statements
 
 ```js
 true;false; variablenname; ;;
 ```
 
-- Floating point arithmetic
+### Floating point arithmetic
 
 Nur double als Nummer-Datentyp. Und das mit IEEE Floating Point Standard. 
 
@@ -168,8 +169,9 @@ Nur double als Nummer-Datentyp. Und das mit IEEE Floating Point Standard.
 0.1 + 0.2 !== 0.3;
 ```
 
-4. Die schlechten Seiten von JS
-- Basiert auf Globalen Variablen
+## Die schlechten Seiten von JS
+
+### Basiert auf Globalen Variablen
 
 ```js
 var names = ['Simon', 'Flo', 'Andy']
@@ -184,7 +186,8 @@ var $ = jquery;
 var $ = mootools; // überschreiben der Variable
 ```
 
-- Semi-Colon Insertion
+### Semi-Colon Insertion
+
 Beispiel: 
 
 ```js
@@ -203,7 +206,7 @@ var add = function(x,y) {
 ```
 
 
-- == und !=
+### == und !=
 
 Beispiel:
 
@@ -219,10 +222,10 @@ null == undefined     // true
 " \t\r\n " == 0       // true
 ```
 
-Lösung: immer === verwenden, da es überall false zurückliefert. 
+Lösung: immer `===` verwenden, da es überall `false` zurückliefert. 
 
 
-- typeof
+### typeof
 
 ```js
 typeof false // "boolean"
@@ -248,9 +251,9 @@ Aber für einen Zweck notwendig:
 typeof var === 'undefined'
 ```
 
-Da früher auch var undefined = "not defined"; erlaubt war. Und man somit nicht var === undefined machen sollte. Wobei Chrome das schon nicht mehr zulässt. 
+Da früher auch `var undefined = "not defined";` erlaubt war. Und man somit nicht `var === undefined` machen sollte. Wobei Chrome das schon nicht mehr zulässt. 
 
-- phony arrays
+### phony arrays
 
 ```js
 var myArray = [7,8,9];
@@ -258,7 +261,7 @@ var myArray = [7,8,9];
 ```
 
 Deswegen geht auch:
-myArray["0"] als Zugriff auf das erste Element. 
+`myArray["0"]` als Zugriff auf das erste Element. 
 
 Arrays werden größer und kleiner, aber sind dadurch auch deutlich langsamer. 
 
