@@ -78,15 +78,21 @@ Sonst Ausgabe der Zahl.
 x durch 3 teilbar => x modulo (%) 3 soll gleich 0 sein
 
 Ausgabe auf der Konsole:
+
+```js
 console.log("Feki.de ist toll");
+```
 
 Ausgabe in aktuellem HTML Fenster:
+
+```js
 document.write("Feki.de ist toll");
 document.write("<br />"); // für neue Zeile
-
+```
 
 ## Komplexere Sprachkonstrukte
 
+```js
 // Kombination von objects und functions. Oder wie strukturiere ich meinen Code?
 
 // arrays
@@ -111,6 +117,7 @@ object = {
    "key1": "value1",
    "key2": function (x) { return x + 1 }
 };
+```
 
 BEISPIEL: localhost:3000/admin/order_origin/.json
 
@@ -118,8 +125,10 @@ BEISPIEL: localhost:3000/admin/order_origin/.json
 
 Organisiere dein fizzbuzz so, dass es wie folgt aufgerufen werden kann:
 
+```js
 // calling fizzbuzz
 de.feki.js.fizzbuzz();
+```
 
 Hinweis: Nutze hierfür ineinander verschachtelte Objektstrukturen (Hashes) um die entsprechenden Namespaces zu erstellen. 
 
@@ -130,55 +139,75 @@ Extrahiere drei weitere Methoden (teilbarDurch3, teilbarDurch5 und teilbarDurch3
 
 - Blockless Statements
 
+```js
 if (foo)
      bar();
+```
 
 Wenn man nun eine weitere Zeile hinzufügt:
 
+```js
 if (foo)
      bar();
      solve();
+```
 
 Wann wird solve(); ausgeführt?
 
 - Expression and Empty Statements
 
+```js
 true;false; variablenname; ;;
+```
 
 - Floating point arithmetic
 
 Nur double als Nummer-Datentyp. Und das mit IEEE Floating Point Standard. 
 
-0.1 + 0.2 !== 0.3
+```js
+0.1 + 0.2 !== 0.3;
+```
 
 4. Die schlechten Seiten von JS
 - Basiert auf Globalen Variablen
 
+```js
 var names = ['Simon', 'Flo', 'Andy']
+// diese Variable ist nun für alle weiteren JS Anweisungen aufrufbar. 
+```
 ...
 
 Namenskonflikte unvermeidbar. 
+
+```js
 var $ = jquery;
-var $ = mootools; ....
+var $ = mootools; // überschreiben der Variable
+```
 
 - Semi-Colon Insertion
 Beispiel: 
 
+```js
 var add = function(x,y) {
     return
             x + y;
 };
+```
 
 vs.
 
+```js
 var add = function(x,y) {
     return x + y;
 };
+```
 
 
 - == und !=
 
 Beispiel:
+
+```js
 '' == '0'             // false
 0 == ''               // true
 0 == '0'              // true
@@ -188,12 +217,14 @@ false == undefined    // false
 false == null         // false
 null == undefined     // true
 " \t\r\n " == 0       // true
+```
 
 Lösung: immer === verwenden, da es überall false zurückliefert. 
 
 
 - typeof
 
+```js
 typeof false // "boolean"
 typeof 3 // "number". Gilt auch für NaN, Infinity
 typeof "name" // "string"
@@ -201,22 +232,30 @@ typeof undefined // "undefined"
 typeof [1,2,3] // "object"
 typeof null // "object"
 typeof {'name': 'Simon'} // "object"
+```
 
 Somit wenig Hilfreich. Beispiel:
 
+```js
 typeof y; // "undefined"
 y = null; 
 typeof y; // "object"
+```
 
 Aber für einen Zweck notwendig:
+
+```js
 typeof var === 'undefined'
+```
 
 Da früher auch var undefined = "not defined"; erlaubt war. Und man somit nicht var === undefined machen sollte. Wobei Chrome das schon nicht mehr zulässt. 
 
 - phony arrays
 
+```js
 var myArray = [7,8,9];
-Wird intern umgewandelt in {"0": 7, "1": 8, "2": 9}
+// Wird intern umgewandelt in {"0": 7, "1": 8, "2": 9}
+```
 
 Deswegen geht auch:
 myArray["0"] als Zugriff auf das erste Element. 
