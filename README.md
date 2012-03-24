@@ -99,10 +99,10 @@ x(2,3); // 5
 
 Ausgaberegeln/Pseudocode: 
 
-Wenn Zahl durch 5 und 3 teilbar ist, dann FizzBuzz.
-Wenn Zahl teilbar durch 3, dann Fizz. 
-Wenn Zahl teilbar durch 5, dann Buzz. 
-Sonst Ausgabe der Zahl. 
+- Wenn Zahl durch 5 und 3 teilbar ist, dann FizzBuzz.
+- Wenn Zahl teilbar durch 3, dann Fizz. 
+- Wenn Zahl teilbar durch 5, dann Buzz. 
+- Sonst Ausgabe der Zahl. 
 
 x durch 3 teilbar => x modulo (%) 3 soll gleich 0 sein
 
@@ -122,8 +122,6 @@ document.write("<br />"); // für neue Zeile
 ## Komplexere Sprachkonstrukte
 
 ```js
-// Kombination von objects und functions. Oder wie strukturiere ich meinen Code?
-
 // arrays
 var myArray = [1,2,3];
 myArray = ["a", "b", "c"];
@@ -142,6 +140,7 @@ object["key"]; // "value"
 object.key = 3;
 object.key; // 3
 
+// Kombination von objects und functions. Oder wie strukturiere ich meinen Code?
 object = {
    "key1": "value1",
    "key2": function (x) { return x + 1 }
