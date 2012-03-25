@@ -161,7 +161,7 @@ object = {
 };
 ```
 
-BEISPIEL: `localhost:3000/admin/order_origin/.json`
+BEISPIEL: `localhost:3000/admin/order_origin.json`
 
 ## Aufgabe 2
 
