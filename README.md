@@ -137,7 +137,7 @@ myArray[1][0]; // 2
 // objects
 var object = {};
 object = {
-   "key": "value";
+   "key": "value"
 };
 object.key; // "value"
 object["key"]; // "value"
@@ -149,7 +149,7 @@ object = {
    "key1": "value1",
    "key2": function (x) { 
       return x + 1; 
-   }
+   },
    "key3": {
       "asdf": function () { 
          return "hallo"; 
