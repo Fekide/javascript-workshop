@@ -16,7 +16,7 @@ Erstelle ein Verzeichnis namens `javascript-workshop` und erzeuge dort ein minim
 <html>
    <head>
       <title>JavaScript Workshop</title>
-      <script type="javascript" src="test.js" />
+      <script type="text/javascript" src="test.js" ></script> <!-- muss genauso geschrieben werden! -->
    </head>
    <body>
       <p>Hallo Welt in HTML</p>
