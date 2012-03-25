@@ -42,8 +42,10 @@ var y = x + 2; // 5
 // conditionals
 if(y == 5) {
    console.log("y ist 5");
+} else if(y < 5) {
+   console.log("y ist kleiner 5");
 } else {
-   console.log("y ist nicht 5");
+   console.log("y ist größer 5");
 }
 
 // for loop
@@ -74,6 +76,19 @@ add(2,3); // 5
 
 var x = add;
 x(2,3); // 5
+```
+
+```js
+var square = function(n) { 
+   return n * n;
+}
+
+// high order functions, d.h. Funktionen, die man anderen Funktionen als Parameter übergeben kann!
+var apply = function(n, func) {
+   func(n);
+};
+
+apply(4,square); // returns 4^2 == 16
 ```
 
 ## Aufgabe 1
